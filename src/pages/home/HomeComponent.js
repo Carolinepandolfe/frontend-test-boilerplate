@@ -1,5 +1,6 @@
 import * as React from "react";
-
+import Select from '../filter/FilterComponent';
+import '../../style/HomeComponent.css'
 class HomeComponent extends React.Component {
   render() {
     const { welcome } = this.props;
@@ -7,7 +8,16 @@ class HomeComponent extends React.Component {
 
     return (
       <React.Fragment>
-        <h2>{welcome}</h2>
+          <h2 className='title'>{welcome}</h2>
+          <div className='container'>
+            <div className='selects'>
+              <Select />
+              <Select />
+              <Select />
+              <Select />
+            </div>
+        </div>
+       
       </React.Fragment>
     );
   }

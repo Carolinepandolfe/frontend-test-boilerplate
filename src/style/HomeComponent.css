@@ -1,0 +1,15 @@
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+}
+
+.selects{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
