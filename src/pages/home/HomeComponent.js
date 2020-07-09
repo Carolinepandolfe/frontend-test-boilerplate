@@ -1,26 +1,50 @@
 import * as React from "react";
-import Select from '../filter/FilterComponent';
+import Filter from '../filter/FilterComponent';
 import '../../style/HomeComponent.css'
-class HomeComponent extends React.Component {
-  render() {
-    const { welcome } = this.props;
-    console.log("welcome", welcome);
+import { useEffect } from "react";
+import axios from "axios";
+import api from '../../config/api'
 
-    return (
-      <React.Fragment>
-          <h2 className='title'>{welcome}</h2>
-          <div className='container'>
-            <div className='selects'>
-              <Select />
-              <Select />
-              <Select />
-              <Select />
-            </div>
-        </div>
-       
-      </React.Fragment>
-    );
-  }
-}
+
+const HomeComponent = () => {
+
+  // const { welcome } = this.props;
+  // console.log("welcome", welcome);
+  
+  // TESTE
+  // useEffect(() => {
+  //   axios.get(api)
+  //   .then(response => {
+  //       console.log(response.data)
+  //   })
+  // }, []);
+  
+  return (
+    <React.Fragment>
+        {/* <h2 className='title'>{welcome}</h2> */}
+        <div className='container'>
+          <div className='selects'>
+            <Filter 
+              placeholder={"Marca..."}            
+            />
+            <Filter
+              placeholder={"Modelo..."}  
+            />
+            <Filter 
+              placeholder={"Ano..."}              
+            />
+            <Filter />
+          </div>
+      </div>
+     
+    </React.Fragment>
+  );
+} 
+
+
+// class HomeComponent extends React.Component {
+//   render() {
+//   }
+// }
 
 export default HomeComponent;

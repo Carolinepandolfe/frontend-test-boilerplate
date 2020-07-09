@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Select from 'react-select';
 import '../../style/FilterComponent.css'
 
@@ -13,7 +13,7 @@ const Filter = () => {
     return (
         <Select className='select'
         options={options}
-        placeholder={'Carro'}/>
+        />
       );
 }
 
